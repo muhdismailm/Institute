@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: white;
+            padding: 25px;
+        }
+
+        .container {
+            margin: 60px auto;
+            max-width: 900px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 220px;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #1e3a8a;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+
+        .card a:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>School Management System</h1>
+        <p>Welcome to our School Portal</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Select Your Login Type</h2>
+        <p>Please select your account to continue.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>Admin</h2>
+                <p>Manage teachers, students and school activities.</p>
+                <a href="{% url 'admin_login' %}">Login</a>
+            </div>
+
+            <div class="card">
+                <h2>Teacher</h2>
+                <p>Manage attendance, marks and assignments.</p>
+                <a href="{% url 'teacher_login' %}">Login</a>
+            </div>
+
+            <div class="card">
+                <h2>Student</h2>
+                <p>View marks, attendance and assignments.</p>
+                <a href="{% url 'student_login' %}">Login</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
